@@ -1,0 +1,31 @@
+GET http://localhost:5154/doctors
+
+###
+GET http://localhost:5154/doctors/1
+
+###
+POST http://localhost:5154/doctors
+Content-Type: application/json
+
+{
+    "name" : "Bashynska Olga Valeriivna",
+    "gender" : "Female",
+    "username" : "baShynska23",
+    "password" : "grassGrows",
+    "specialization" : "Surgeon"
+}
+
+###
+PUT  http://localhost:5154/doctors/3
+Content-Type: application/json
+
+{
+    "name" : "Vashchenko Valeriya Petrivna",
+    "gender" : "Female",
+    "username" : "vashchEnKo49",
+    "password" : "emitedXrays",
+    "specialization" : "Radiologist"
+}
+
+###
+DELETE http://localhost:5154/doctors/4
