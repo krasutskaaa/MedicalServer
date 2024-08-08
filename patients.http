@@ -1,0 +1,28 @@
+GET http://localhost:5154/patients
+
+###
+GET http://localhost:5154/patients/1
+
+###
+POST http://localhost:5154/patients
+Content-Type: application/json
+
+{
+    "name" : "Fiyalo Dmytro Ivanovych",
+    "gender" : "Male",
+    "birthday" : "1981-05-03"
+}
+
+
+###
+PUT http://localhost:5154/patients/3
+Content-type: application/json
+
+{
+    "name" : "Fiyalo Dmytro Ivanovych",
+    "gender" : "Male",
+    "birthday" : "1981-05-05"
+}
+
+###
+DELETE http://localhost:5154/patients/2
