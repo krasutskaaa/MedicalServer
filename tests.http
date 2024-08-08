@@ -1,0 +1,39 @@
+GET http://localhost:5154/tests
+
+###
+GET http://localhost:5154/tests/1
+
+###
+POST http://localhost:5154/tests
+Content-Type: application/json
+
+{
+    
+    "patientId" = 1,
+    "doctorId" = 2,
+    "RedBloodCellCount" = 4.7e12,
+    "WhiteBloodCellCount" = 4.5e9,
+    "PlateletCount" = 300e9,
+    "HemoglobinTest" = 9,
+    "HematocritTest" = 0.40,
+    "MeanCorpuscularVolume" = 90 
+}
+
+
+###
+PUT http://localhost:5154/tests/5
+Content-type: application/json
+
+{
+    "patientId" = 1,
+    "doctorId" = 5,
+    "RedBloodCellCount" = 4.7e12,
+    "WhiteBloodCellCount" = 4.5e9,
+    "PlateletCount" = 300e9,
+    "HemoglobinTest" = 9,
+    "HematocritTest" = 0.40,
+    "MeanCorpuscularVolume" = 90 
+}
+
+###
+DELETE http://localhost:5154/tests/6
