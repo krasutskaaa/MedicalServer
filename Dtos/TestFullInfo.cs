@@ -5,12 +5,11 @@ public record class TestFullInfo
     Guid Id,
     Guid PatientId,
     Guid DoctorId,
-    float RedBloodCellCount,
-    float WhiteBloodCellCount,
-    float PlateletCount,
-    float HemoglobinTest,
-    float HematocritTest,
-    float MeanCorpuscularVolume,
+    string Name,
+    float Value,
+    float MinValue,
+    float MaxValue,
+    string UMeasurement,
     DateTime CreatedAt,
     DateTime? UpdatedAt
     );
