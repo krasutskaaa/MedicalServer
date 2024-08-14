@@ -9,16 +9,13 @@ public record class CreateTestDto
     [Required]
     Guid DoctorId,
     [Required]
-    float RedBloodCellCount,
+    string Name,
     [Required]
-    float WhiteBloodCellCount,
+    float Value,
     [Required]
-    float PlateletCount,
+    float MinValue,
     [Required]
-    float HemoglobinTest,
+    float MaxValue,
     [Required]
-    float HematocritTest,
-    [Required]
-    float MeanCorpuscularVolume
-
+    string UMeasurement
     );
