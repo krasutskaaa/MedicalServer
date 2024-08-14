@@ -11,12 +11,11 @@ Content-Type: application/json
     
     "patientId" = 1,
     "doctorId" = 2,
-    "RedBloodCellCount" = 4.7e12,
-    "WhiteBloodCellCount" = 4.5e9,
-    "PlateletCount" = 300e9,
-    "HemoglobinTest" = 9,
-    "HematocritTest" = 0.40,
-    "MeanCorpuscularVolume" = 90 
+    "Name" = "RedBloodCellCount",
+    "Value" = 4.7e6,
+    "MinValue" = 4.35e6,
+    "MaxValue" = 5.65e6,
+    "UMeasurement" = "cells/mcL" 
 }
 
 
@@ -27,12 +26,13 @@ Content-type: application/json
 {
     "patientId" = 1,
     "doctorId" = 5,
-    "RedBloodCellCount" = 4.7e12,
-    "WhiteBloodCellCount" = 4.5e9,
-    "PlateletCount" = 300e9,
-    "HemoglobinTest" = 9,
-    "HematocritTest" = 0.40,
-    "MeanCorpuscularVolume" = 90 
+    "Name" = "WhiteBloodCellCount",
+    "Value" = 6e9,
+    "MinValue" = 4.5e9,
+    "MaxValue" = 11e9,
+    "UMeasurement" = "cells/L"
+    
+    
 }
 
 ###
