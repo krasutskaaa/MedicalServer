@@ -11,13 +11,11 @@ public static class TestMapping
         return new(
             test.PatientId,
             test.DoctorId,
-            test.RedBloodCellCount,
-            test.WhiteBloodCellCount,
-            test.PlateletCount,
-            test.HemoglobinTest,
-            test.HematocritTest,
-            test.MeanCorpuscularVolume
-
+            test.Name,
+            test.Value,
+            test.MinValue,
+            test.MaxValue,
+            test.UMeasurement
             );
     }
 
@@ -27,13 +25,11 @@ public static class TestMapping
         {
             PatientId = test.PatientId,
             DoctorId = test.DoctorId,
-            RedBloodCellCount = test.RedBloodCellCount,
-            WhiteBloodCellCount = test.WhiteBloodCellCount,
-            PlateletCount = test.PlateletCount,
-            HemoglobinTest = test.HemoglobinTest,
-            HematocritTest = test.HematocritTest,
-            MeanCorpuscularVolume = test.MeanCorpuscularVolume
-
+            Name = test.Name,
+            Value = test.Value,
+            MinValue = test.MinValue,
+            MaxValue = test.MaxValue,
+            UMeasurement = test.UMeasurement
         };
     }
 
@@ -44,12 +40,11 @@ public static class TestMapping
             test.Id,
             test.PatientId,
             test.DoctorId,
-            test.RedBloodCellCount,
-            test.WhiteBloodCellCount,
-            test.PlateletCount,
-            test.HemoglobinTest,
-            test.HematocritTest,
-            test.MeanCorpuscularVolume,
+            test.Name,
+            test.Value,
+            test.MinValue,
+            test.MaxValue,
+            test.UMeasurement,
             test.CreatedAt,
             test.UpdatedAt
             );
@@ -63,12 +58,11 @@ public static class TestMapping
             Id = id,
             PatientId = test.PatientId,
             DoctorId = test.DoctorId,
-            RedBloodCellCount = test.RedBloodCellCount,
-            WhiteBloodCellCount = test.WhiteBloodCellCount,
-            PlateletCount = test.PlateletCount,
-            HemoglobinTest = test.HemoglobinTest,
-            HematocritTest = test.HematocritTest,
-            MeanCorpuscularVolume = test.MeanCorpuscularVolume,
+            Name = test.Name,
+            Value = test.Value,
+            MinValue = test.MinValue,
+            MaxValue = test.MaxValue,
+            UMeasurement= test.UMeasurement,
             UpdatedAt = DateTime.Now
         };
     }
