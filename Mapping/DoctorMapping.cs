@@ -1,5 +1,6 @@
 ﻿using CourseworkMedicalServer.Abstractions.Entities;
 using CourseworkMedicalServer.Dtos;
+using CourseworkMedicalServer.Encryption;
 
 namespace CourseworkMedicalServer.Mapping;
 
@@ -21,7 +22,7 @@ public static class DoctorMapping
             Name = doctor.Name,
             Gender = doctor.Gender,
             Username = doctor.Username,
-            Password = doctor.Password,
+            Password = doctor.Password.GenerateSHA256(),
             Specialization = doctor.Specialization
 
         };
@@ -50,7 +51,7 @@ public static class DoctorMapping
             Name = doctor.Name,
             Gender = doctor.Gender,
             Username = doctor.Username,
-            Password = doctor.Password,
+            Password = doctor.Password.GenerateSHA256(),
             Specialization = doctor.Specialization,
             UpdatedAt = DateTime.Now
         };
