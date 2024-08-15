@@ -1,22 +1,22 @@
-GET http://localhost:5154/doctors
+GET http://localhost:5235/doctors
 
 ###
-GET http://localhost:5154/doctors/1
+GET http://localhost:5235/doctors/1
 
 ###
-POST http://localhost:5154/doctors
+POST http://localhost:5235/doctors
 Content-Type: application/json
 
 {
-    "name" : "Bashynska Olga Valeriivna",
+    "name" : "Krasutska Diana Hryhorivna",
     "gender" : "Female",
-    "username" : "baShynska23",
-    "password" : "grassGrows",
+    "username" : "krasutskaaa",
+    "password" : "qwerty89",
     "specialization" : "Surgeon"
 }
 
 ###
-PUT  http://localhost:5154/doctors/3
+PUT  http://localhost:5235/doctors/3
 Content-Type: application/json
 
 {
@@ -28,4 +28,4 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:5154/doctors/4
+DELETE http://localhost:5235/doctors/4
