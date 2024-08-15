@@ -1,6 +1,9 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+using CourseworkMedicalServer.Data;
+using CourseworkMedicalServer.Endpoints;
 
-app.MapGet("/", () => "Hello World!");
+var builder = WebApplication.CreateBuilder(args);
+var connString = builder.Configuration.GetConnectionString("TestsStore");
+builder.Services.AddSqlite<TestsStoreDBContext>(connString);
+var app = builder.Build();
 
 app.Run();
