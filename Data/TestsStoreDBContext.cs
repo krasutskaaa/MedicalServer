@@ -22,7 +22,7 @@ public class TestsStoreDBContext(DbContextOptions<TestsStoreDBContext> options)
 
             entity
             .HasOne(test => test.Patient)
-            .WithMany(patient => patient.Tests)
+            .WithMany()
             .HasForeignKey(test => test.PatientId);
         });
     }
