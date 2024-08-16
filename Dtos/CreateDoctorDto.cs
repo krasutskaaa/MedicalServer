@@ -8,7 +8,7 @@ public record class CreateDoctorDto(
     [Required][StringLength(50)]
     string Name,
     [Required]
-    Gender Gender,
+    string Gender,
     [Required][RegularExpression(@"^[A-Za-z0-9]+$",
     ErrorMessage =
     "The username must have at least one of the charachters(A-Z,a-z,0-9)")]
@@ -17,6 +17,6 @@ public record class CreateDoctorDto(
     ErrorMessage = "The field must be al least 8 charachters")]
     string Password,
     [Required]
-    Specialization Specialization
+    string Specialization
 
 );
