@@ -4,7 +4,7 @@ namespace CourseworkMedicalServer.Dtos;
 
 public record class PatientGeneralInfo(
     string Name,
-    Gender Gender,
+    string Gender,
     DateOnly Birthday,
     string? Description
     );
