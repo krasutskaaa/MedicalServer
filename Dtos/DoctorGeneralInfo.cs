@@ -5,5 +5,5 @@ namespace CourseworkMedicalServer.Dtos;
 
 public record class DoctorGeneralInfo(
     string Name,
-    Gender Gender,
-    Specialization Specialization);
+    string Gender,
+    string Specialization);
