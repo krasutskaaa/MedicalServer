@@ -7,9 +7,9 @@ public record class DoctorFullInfo(
 
     Guid Id,
     string Name,
-    Gender Gender,
+    string Gender,
     string Username,
-    Specialization Specialization,
+    string Specialization,
     DateTime CreatedAt,
     DateTime? UpdatedAt
     );
