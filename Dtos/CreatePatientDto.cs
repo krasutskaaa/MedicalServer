@@ -7,7 +7,7 @@ public record class CreatePatientDto(
     [Required][StringLength(50)]
     string Name,
     [Required]
-    Gender Gender,
+    string Gender,
     [Required]
     DateOnly Birthday,
     string? Description
