@@ -7,7 +7,7 @@ public record class UpdatePatientDto(
     [Required][StringLength(50)]
     string Name,
     [Required]
-    Gender Gender,
+    string Gender,
     [Required]
     DateOnly Birthday,
     string? Description
