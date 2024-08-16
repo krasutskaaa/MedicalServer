@@ -6,7 +6,7 @@ public record class PatientFullInfo(
 
     Guid Id,
     string Name,
-    Gender Gender,
+    string Gender,
     DateOnly Birthday,
     string? Description,
     DateTime CreatedAt,
