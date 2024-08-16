@@ -3,14 +3,8 @@
 public interface IAliveEntity
 {
     public string Name { get; set; }
-    public Gender Gender { get; set; }
+    public string Gender { get; set; }
 
 }
 
-// From consideration of biological identification
 
-public enum Gender
-{
-    Male,
-    Female
-}
