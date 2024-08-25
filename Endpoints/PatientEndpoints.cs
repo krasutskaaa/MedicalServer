@@ -33,6 +33,14 @@ public static class PatientEndpoints
 
         })
             .WithName(GetPatientEndpointName);
+        //GET/patients/{id}
+        group.MapGet("/fullInfo/{id}", async (Guid id, TestsStoreDBContext dbContext) =>
+        {
+            Patient? patient = await dbContext.Patients.FindAsync(id);
+
+            return patient is null ?
+                Results.NotFound() : Results.Ok(patient);
+        });
 
 
         //POST/patients
