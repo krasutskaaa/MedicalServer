@@ -9,10 +9,10 @@ Content-Type: application/json
 
 {
     "name" : "Krasutska Diana Hryhorivna",
-    "gender" : "Female",
-    "username" : "krasutskaaa",
+    "gender" : "female",
+    "username" : "krasutsKaaa76",
     "password" : "qwerty89",
-    "specialization" : "Surgeon"
+    "specialization" : "surgeon"
 }
 
 ###
