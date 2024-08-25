@@ -3,6 +3,7 @@ using CourseworkMedicalServer.Dtos;
 using CourseworkMedicalServer.Mapping;
 using CourseworkMedicalServer.Abstractions.Entities;
 using Microsoft.EntityFrameworkCore;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace CourseworkMedicalServer.Endpoints;
 
@@ -24,14 +25,26 @@ public static class TestEndpoints
 
         //GET/tests/1
 
-        group.MapGet("/{id}", async (Guid id, TestsStoreDBContext dbContext) =>
+        group.MapGet("/by-testId/{id}", async (Guid id, TestsStoreDBContext dbContext) =>
         {
             Test? test = await dbContext.Tests.FindAsync(id);
 
             return test is null ?
             Results.NotFound() : Results.Ok(test.ToTestGeneralInfo());
         })
-            .WithName(GetTestEndpointName);
+            .WithName(GetTestEndpointName+"ById");
+
+        //GET//tests/{doctorId}
+        group.MapGet("/by-doctorId/{doctorId}", async (Guid doctorId, TestsStoreDBContext dbContext) =>
+        {
+            List<Test> tests = await dbContext.Tests
+            .Where(test => test.DoctorId.Equals(doctorId))
+            .ToListAsync();
+            return tests is null ?
+            Results.NotFound() : Results.Ok(tests);
+        })
+            .WithName(GetTestEndpointName + "ByDoctorId");
+
 
         //POST/tests
         group.MapPost("/", async (CreateTestDto newTest,
