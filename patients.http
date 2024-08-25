@@ -9,7 +9,7 @@ Content-Type: application/json
 
 {
     "name" : "Fiyalo Dmytro Ivanovych",
-    "gender" : "Male",
+    "gender" : "male",
     "birthday" : "1981-05-03"
 }
 
