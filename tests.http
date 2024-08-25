@@ -9,13 +9,13 @@ Content-Type: application/json
 
 {
     
-    "patientId" = 1,
-    "doctorId" = 2,
-    "Name" = "RedBloodCellCount",
-    "Value" = 4.7e6,
-    "MinValue" = 4.35e6,
-    "MaxValue" = 5.65e6,
-    "UMeasurement" = "cells/mcL" 
+    "patientId" : "81CEF3E6-B132-4774-8031-40EFF2772B6E",
+    "doctorId" : "9801CC8D-C5ED-4850-B3DC-48A6C9B09C91",
+    "Name" : "RedBloodCellCount",
+    "Value" : 4.7e6,
+    "MinValue" : 4.35e6,
+    "MaxValue" : 5.65e6,
+    "UMeasurement" : "cells/mcL" 
 }
 
 
@@ -24,13 +24,13 @@ PUT http://localhost:5235/tests/5
 Content-type: application/json
 
 {
-    "patientId" = 1,
-    "doctorId" = 5,
-    "Name" = "WhiteBloodCellCount",
-    "Value" = 6e9,
-    "MinValue" = 4.5e9,
-    "MaxValue" = 11e9,
-    "UMeasurement" = "cells/L"
+    "patientId" : 1,
+    "doctorId" : 5,
+    "Name" : "WhiteBloodCellCount",
+    "Value" : 6e9,
+    "MinValue" : 4.5e9,
+    "MaxValue" : 11e9,
+    "UMeasurement" : "cells/L"
     
     
 }
