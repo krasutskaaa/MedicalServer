@@ -22,7 +22,7 @@ public static class DoctorEndpoints
 
 
         //GET/doctors/1
-        group.MapGet("/{id}", async (Guid id, TestsStoreDBContext dbContext) =>
+        group.MapGet("/{id:guid}", async (Guid id, TestsStoreDBContext dbContext) =>
         {
             Doctor? doctor = await dbContext.Doctors.FindAsync(id);
 
@@ -31,8 +31,18 @@ public static class DoctorEndpoints
 
 
         })
-            .WithName(GetDoctorEndpointName);
+            .WithName(GetDoctorEndpointName+"ById");
+        //GET/doctors/username
 
+        group.MapGet("/{username}", async (string username, TestsStoreDBContext dbContext) =>
+        {
+            Doctor? doctor = await dbContext.Doctors
+            .FirstOrDefaultAsync(doctor => doctor.Username.Equals(username));
+
+            return doctor is null ?
+            Results.NotFound() : Results.Ok(doctor);
+        })
+            .WithName(GetDoctorEndpointName + "ByUsername");
 
         //POST/docotors
 
@@ -44,7 +54,7 @@ public static class DoctorEndpoints
             await dbContext.SaveChangesAsync();
 
             return Results.CreatedAtRoute(
-                GetDoctorEndpointName,
+                GetDoctorEndpointName+"ById",
                 new { id = doctor.Id },
                 doctor.ToDoctorFullInfo());
 
