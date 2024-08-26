@@ -1,7 +1,7 @@
 ﻿using CourseworkMedicalServer.Data;
-using CourseworkMedicalServer.Dtos;
-using CourseworkMedicalServer.Mapping;
-using CourseworkMedicalServer.Abstractions.Entities;
+using SharedLibrary.Dtos;
+using SharedLibrary.Mapping;
+using SharedLibrary.Abstractions.Entities;
 using Microsoft.EntityFrameworkCore;
 using static System.Net.Mime.MediaTypeNames;
 

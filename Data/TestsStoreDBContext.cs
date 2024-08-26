@@ -1,4 +1,4 @@
-﻿using CourseworkMedicalServer.Abstractions.Entities;
+﻿using SharedLibrary.Abstractions.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace CourseworkMedicalServer.Data;
